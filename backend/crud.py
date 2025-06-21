@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-import models, schemas
+from backend import models, schemas
 
 def get_notes(db: Session):
     return db.query(models.Note).all()
