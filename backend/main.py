@@ -38,3 +38,7 @@ def create_note(note: schemas.NoteCreate, db: Session = Depends(get_db)):
 @app.delete("/notes/{note_id}")
 def delete_note(note_id: int, db: Session = Depends(get_db)):
     return crud.delete_note(db=db, note_id=note_id)
+
+@app.put("/notes/{note_id}", response_model=schemas.Note)
+def update_note(note_id: int, note: schemas.NoteCreate, db: Session = Depends(get_db)):
+    return crud.update_note(db=db, note_id=note_id, updated_note=note)

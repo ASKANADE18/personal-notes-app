@@ -17,3 +17,12 @@ def delete_note(db: Session, note_id: int):
         db.delete(note)
         db.commit()
     return {"message": "Note deleted"}
+
+def update_note(db: Session, note_id: int, updated_note: schemas.NoteCreate):
+    note = db.query(models.Note).filter(models.Note.id == note_id).first()
+    if note:
+        note.title = updated_note.title
+        note.content = updated_note.content
+        db.commit()
+        db.refresh(note)
+    return note

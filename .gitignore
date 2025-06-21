@@ -3,15 +3,11 @@ __pycache__/
 *.pyc
 venv/
 .env
+notes.db
 
-# Node/JS tools (if ever added)
+# Node (if ever used)
 node_modules/
 
-# OS
+# OS + Editor
 .DS_Store
-
-# IDE
 .vscode/
-
-# Other
-*.log
