@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Node/JS tools (if ever added)
+node_modules/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Other
+*.log

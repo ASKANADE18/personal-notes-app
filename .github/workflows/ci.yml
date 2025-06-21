@@ -1,0 +1,20 @@
+name: CI Pipeline
+
+on:
+  push:
+    paths:
+      - 'frontend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Run basic file check
+      run: |
+        echo "Files in frontend/"
+        ls frontend
+        
