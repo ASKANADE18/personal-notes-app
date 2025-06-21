@@ -6,7 +6,7 @@ let isEditing = false;
 let editNoteId = null;
 
 // 🌐 FastAPI backend base URL
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://personal-notes-app-pfnq.onrender.com"
 
 // 📥 Fetch and display notes on page load
 window.onload = () => {
@@ -81,8 +81,10 @@ function renderNote(note) {
   noteCard.innerHTML = `
     <h3>${note.title}</h3>
     <p>${note.content}</p>
+    <div class="card-buttons">
     <button class="delete-btn">Delete</button>
     <button class="edit-btn">Edit</button>
+    </div>
   `;
 
   // 🗑️ Delete note
