@@ -6,7 +6,7 @@ let isEditing = false;
 let editNoteId = null;
 
 // 🌐 FastAPI backend base URL
-const API_BASE_URL = "https://personal-notes-app-e32v.onrender.com";
+const API_BASE_URL = "https://personal-notes-app-ltnn.onrender.com";
 
 
 // 📥 Fetch and display notes on page load
