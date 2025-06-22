@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from backend import crud, models, schemas
+import crud, models, schemas
 import SessionLocal, engine
 
 # Create database tables
