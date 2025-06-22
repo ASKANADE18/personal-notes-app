@@ -8,6 +8,7 @@ let editNoteId = null;
 // 🌐 FastAPI backend base URL
 const API_BASE_URL = "https://personal-notes-app-e32v.onrender.com";
 
+
 // 📥 Fetch and display notes on page load
 window.onload = () => {
   fetchNotes();
@@ -18,10 +19,8 @@ function fetchNotes() {
   fetch(`${API_BASE_URL}/notes`)
     .then(res => res.json())
     .then(data => {
-      notesContainer.innerHTML = "";  // Clear existing notes
-      data.forEach(note => {
-        renderNote(note);
-      });
+      notesContainer.innerHTML = "";
+      data.forEach(note => renderNote(note));
     })
     .catch(err => console.error("Error fetching notes:", err));
 }
